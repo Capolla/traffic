@@ -2,7 +2,7 @@
   "name": "traffic",
   "version": "1.0.0",
   "description": "traffic.js is designed for rail control system web ui",
-  "main": "dist/index.js",
+  "main": "dist/traffic.js",
   "directories": {
     "doc": "doc",
     "test": "test"
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/hnyd9374/traffic.git"
   },
-  "author": "Captain",
+  "author": "Capolla",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hnyd9374/traffic/issues"
