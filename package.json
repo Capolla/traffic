@@ -2,12 +2,19 @@
   "name": "traffic",
   "version": "1.0.0",
   "description": "traffic.js is designed for rail control system web ui",
-  "main": "dist/traffic.js",
+  "main": "dist/traffic.cjs.js",
+  "module": "dist/traffic.esm.js",
+  "umd:main": "dist/traffic.umd.js",
+  "amd:main": "dist/traffic.amd.js",
+  "files": [
+    "dist"
+  ],
   "directories": {
     "doc": "doc",
     "test": "test"
   },
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
