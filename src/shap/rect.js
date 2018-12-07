@@ -1,3 +1,9 @@
-var rect = 'i`m rect'
 
-export default rect
+class Rect {
+  constructor (name) {
+    this.type = 'rect'
+    this.name = name
+  }
+}
+
+export default Rect
