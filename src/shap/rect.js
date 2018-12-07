@@ -1,3 +1,3 @@
-let rect = 'i`m rect'
+var rect = 'i`m rect'
 
 export default rect
