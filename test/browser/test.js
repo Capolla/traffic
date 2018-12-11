@@ -1,4 +1,4 @@
-import traffic from '../../dist/traffic.umd'
+// import traffic from '../../dist/traffic.umd'
 
 // let tmp = traffic + ' -- ' + 'end'
 

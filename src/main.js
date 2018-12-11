@@ -1,4 +1,6 @@
 import Rect from './shap/rect'
+import model from './model/model'
+import constant from './util/constant'
 
 class Traffic {
   constructor (banner) {
@@ -25,6 +27,13 @@ class Traffic {
   }
 
   /**
+   * application model
+   */
+  model () {
+    return model
+  }
+
+  /**
    * print rect list
    * @param {rect object} rect
    */
@@ -34,5 +43,6 @@ class Traffic {
 }
 
 var traffic = new Traffic('traffic.js@Capolla')
+model.set(constant.TRAFFIC, traffic)
 
 export default traffic

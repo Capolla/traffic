@@ -20,7 +20,7 @@ traffic.js is a graphic library designed for rail control system web ui.
 Using npm.
 
 ```bash
-npm install traffic --save
+$ npm install traffic --save
 ```
 node environment：
 
