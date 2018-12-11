@@ -1,7 +1,7 @@
 {
   "name": "traffic",
   "version": "1.0.0",
-  "description": "traffic.js is designed for rail control system web ui",
+  "description": "traffic.js a graphic library designed for rail control system web ui.",
   "main": "dist/traffic.cjs.js",
   "module": "dist/traffic.esm.js",
   "umd:main": "dist/traffic.umd.js",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hnyd9374/traffic.git"
+    "url": "git+https://github.com/Capolla/traffic.git"
   },
   "author": "Capolla",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hnyd9374/traffic/issues"
+    "url": "https://github.com/Capolla/traffic/issues"
   },
-  "homepage": "https://github.com/hnyd9374/traffic#readme",
+  "homepage": "https://github.com/Capolla/traffic#readme",
   "dependencies": {
     "rollup": "^0.67.4"
   },
