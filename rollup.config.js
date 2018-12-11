@@ -1,6 +1,5 @@
-/**
- * Created by Captain on 2018/12/6 14:38.
- */
+import babel from 'rollup-plugin-babel'
+
 export default [
   {
     file: 'dist/traffic.cjs.js',
@@ -24,6 +23,8 @@ export default [
   input: 'src/main.js',
   output,
   plugins: [
-
+    babel({
+      exclude: 'node_modules/**' // babel仅仅编译项目的源码
+    })
   ]
 }))
