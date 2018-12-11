@@ -1,9 +1,12 @@
-# traffic.js
+# traffic.js  
+
+[![](https://img.shields.io/badge/Powered%20by-traffic-brightgreen.svg)](https://github.com/Capolla/traffic)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
 
 traffic.js a graphic library designed for rail control system web ui.
 
 ## Directory
----
+
 ```
 ├── doc - Project documents
 ├── src - Source code directory
@@ -13,7 +16,7 @@ traffic.js a graphic library designed for rail control system web ui.
 ```
 
 ## Usage 
----
+
 Using npm.
 
 ```bash
