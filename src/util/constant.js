@@ -1,7 +1,7 @@
 /**
  * application constant
  */
-var constant = {}
+const constant = {}
 
 constant.TRAFFIC = 'traffic'
 constant.CANVAS = 'canvas'

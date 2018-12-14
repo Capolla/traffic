@@ -1,6 +1,11 @@
+import Shap from './shap'
 
-class Rect {
+/**
+ * Rect class
+ */
+class Rect extends Shap {
   constructor (name) {
+    super()
     this.type = 'rect'
     this.name = name
   }
