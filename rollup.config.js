@@ -43,6 +43,6 @@ export default [
       ENV: JSON.stringify(process.env.NODE_ENV || 'development') // 更换全局变量ENV的值
     }),
     // (process.env.NODE_ENV === 'production' && uglify()), // 采用短路计算策略：生产环境下压缩js文件
-    (process.env.NODE_ENV === 'production' && terser()) // 采用短路计算策略：生产环境下压缩js文件
+    (process.env.NODE_ENV === 'production' && terser()) // 采用短路计算策略：生产环境下压缩js文件，这里使用了terser而非uglify，因为uglify不支持es6
   ]
 }))
