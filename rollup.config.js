@@ -2,6 +2,8 @@ import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import replace from 'rollup-plugin-replace'
+// import uglify from 'rollup-plugin-uglify'
+import { terser } from 'rollup-plugin-terser'
 
 export default [
   {
@@ -39,6 +41,8 @@ export default [
     }),
     replace({
       ENV: JSON.stringify(process.env.NODE_ENV || 'development') // 更换全局变量ENV的值
-    })
+    }),
+    // (process.env.NODE_ENV === 'production' && uglify()), // 采用短路计算策略：生产环境下压缩js文件
+    (process.env.NODE_ENV === 'production' && terser()) // 采用短路计算策略：生产环境下压缩js文件
   ]
 }))
