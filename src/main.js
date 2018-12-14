@@ -1,60 +1,33 @@
-import Rect from './shap/rect'
+import Traffic from './core/traffic'
 import model from './model/model'
 import constant from './util/constant'
 import debug from 'debug'
 
+/**
+ * @version 1.0.0
+ * @author Xiangyu Du
+ *
+ * 项目入口文件
+ *
+ * 构造traffic实体并将其导出
+ */
+
 const log = debug('app:log')
-// The logger should only be disabled if we’re not in production.
+// The logger should only be disabled if we’re not in production
 if (ENV !== 'production') {
-  // Enable the logger.
+  // Enable the logger
   debug.enable('*')
   log('Logging is enabled!')
 } else {
+  // Disable the logger
   debug.disable()
 }
 
-class Traffic {
-  constructor (banner) {
-    /**
-     * traffic banner
-     */
-    this.BANNER = banner
-    /**
-     * rect
-     */
-    this.Rect = Rect
-    /**
-     * rect list
-     */
-    this.rectList = []
-  }
-  /**
-   * print message
-   */
-  print () {
-    console.log('[BANNER]', this.BANNER)
-    // console.log('[rect]', this.Rect)
-    console.log('[rect list]', this.rectList)
-  }
+var traffic = new Traffic('traffic.js@XiangyuDu')
 
-  /**
-   * application model
-   */
-  model () {
-    return model
-  }
-
-  /**
-   * print rect list
-   * @param {rect object} rect
-   */
-  addRect (rect) {
-    this.rectList.push(rect)
-  }
-}
-
-var traffic = new Traffic('traffic.js@Capolla')
 model.set(constant.TRAFFIC, traffic)
-// console.log(process.env.NODE_ENV)
+traffic.setModel(model)
+
+log('--- traffic construct successfully! ---')
 
 export default traffic

@@ -1,5 +1,7 @@
 /**
  * Shap base class
+ *
+ * traffic中所有形状的基类
  */
 class Shap {
   constructor () {
