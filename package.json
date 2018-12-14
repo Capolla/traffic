@@ -6,7 +6,9 @@
   "module": "dist/traffic.esm.js",
   "umd:main": "dist/traffic.umd.js",
   "amd:main": "dist/traffic.amd.js",
-  "eslintIgnore": ["dist/"],
+  "eslintIgnore": [
+    "dist/"
+  ],
   "files": [
     "dist"
   ],
@@ -16,6 +18,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "build:production": "cross-env NODE_ENV=production rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,17 +32,22 @@
   },
   "homepage": "https://github.com/Capolla/traffic#readme",
   "dependencies": {
+    "debug": "^4.1.0",
     "rollup": "^0.67.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "rollup-plugin-babel": "^4.0.3"
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.0"
   }
 }

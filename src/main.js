@@ -1,6 +1,17 @@
 import Rect from './shap/rect'
 import model from './model/model'
 import constant from './util/constant'
+import debug from 'debug'
+
+const log = debug('app:log')
+// The logger should only be disabled if we’re not in production.
+if (ENV !== 'production') {
+  // Enable the logger.
+  debug.enable('*')
+  log('Logging is enabled!')
+} else {
+  debug.disable()
+}
 
 class Traffic {
   constructor (banner) {
@@ -44,5 +55,6 @@ class Traffic {
 
 var traffic = new Traffic('traffic.js@Capolla')
 model.set(constant.TRAFFIC, traffic)
+// console.log(process.env.NODE_ENV)
 
 export default traffic
