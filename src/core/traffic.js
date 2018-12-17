@@ -1,20 +1,21 @@
-import Rect from '../shap/rect'
+import Rect from '../shape/rect'
 import Brush from './brush'
+import BaseClass from './base'
 
-class Traffic {
-  constructor (banner) {
+/**
+ * Traffic
+ */
+class Traffic extends BaseClass {
+  constructor () {
+    super()
     /**
      * traffic banner
      */
-    this.BANNER = banner
+    this.BANNER = 'traffic.js@XiangyuDu'
     /**
      * rect
      */
     this.Rect = Rect
-    // /**
-    //  * rect list
-    //  */
-    // this.rectList = []
     /**
      * traffic brush
      */
@@ -22,11 +23,14 @@ class Traffic {
     /**
      * application model
      */
-    this.model = {}
+    this._model = {}
   }
 
+  /**
+   * 初始化Traffic
+   */
   init () {
-
+    this.logger('traffic init')
   }
 
   /**
@@ -38,20 +42,20 @@ class Traffic {
   }
 
   getModel () {
-    return this.model
+    if (typeof this._model === 'undefined') {
+      this.error('traffic model is undefined!')
+      this._model = {}
+    }
+    return this._model
   }
 
   setModel (model) {
-    this.model = model
+    if (typeof model === 'undefined') {
+      this.error('cannot set model to undefined!')
+      return
+    }
+    this._model = model
   }
-
-  // /**
-  //  * print rect list
-  //  * @param {rect object} rect
-  //  */
-  // addRect (rect) {
-  //   this.rectList.push(rect)
-  // }
 }
 
 export default Traffic
