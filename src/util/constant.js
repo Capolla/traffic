@@ -8,6 +8,7 @@ constant.CANVAS = 'canvas'
 constant.BRUSH = 'brush'
 constant.LOGGER = 'logger'
 
-constant.RECT = 'shap_rect'
+constant.SHAPE_RECT = 'shape_rect'
+constant.SHAPE_ALL = 'shape_all'
 
 export default constant

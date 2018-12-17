@@ -23,7 +23,7 @@ if (ENV !== 'production') {
   debug.disable()
 }
 
-var traffic = new Traffic('traffic.js@XiangyuDu')
+var traffic = new Traffic()
 
 model.set(constant.TRAFFIC, traffic)
 traffic.setModel(model)

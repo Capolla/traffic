@@ -12,15 +12,20 @@
   <!-- <script src="../../dist/traffic.iife.js"></script> -->
   <!-- <script src="./test.js"></script> -->
   <script>
+    console.log('Traffic:', traffic)
+
     var rect = new traffic.Rect('', {
       coorX: 200,
       coorY: 200,
       width: 100,
       height: 100
     })
-    var brush = new traffic.Brush('canvas');
+    var brush = new traffic.Brush('canvas')
 
     brush.draw(rect)
+    // traffic.setModel(undefined) 
+
+    var canvas = brush.h5Canvas()
   </script>
 
 </body>
