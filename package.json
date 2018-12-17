@@ -1,7 +1,7 @@
 {
   "name": "traffic",
   "version": "1.0.0",
-  "author": "Xiangyu Du (Capolla@163.com)",
+  "author": "Xiangyu Du (xyd_hnyd@163.com)",
   "description": "traffic.js is a JavaScript graphic library designed for rail control system web ui.",
   "main": "dist/traffic.cjs.js",
   "module": "dist/traffic.esm.js",
@@ -24,13 +24,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Capolla/traffic.git"
+    "url": "git+https://github.com/hnyd/traffic.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Capolla/traffic/issues"
+    "url": "https://github.com/hnyd/traffic/issues"
   },
-  "homepage": "https://github.com/Capolla/traffic#readme",
+  "homepage": "https://github.com/hnyd/traffic#readme",
   "dependencies": {
     "debug": "^4.1.0",
     "rollup": "^0.67.4"

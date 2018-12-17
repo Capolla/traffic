@@ -1,6 +1,6 @@
 # traffic.js  
 
-[![](https://img.shields.io/badge/Powered%20by-traffic-brightgreen.svg)](https://github.com/Capolla/traffic)
+[![](https://img.shields.io/badge/Powered%20by-traffic-brightgreen.svg)](https://github.com/hnyd/traffic)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
 
 traffic.js is a JavaScript graphic library designed for rail control system web ui.
