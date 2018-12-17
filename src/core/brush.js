@@ -9,7 +9,7 @@ import model from '../model/model'
  */
 class Brush extends BaseClass {
   constructor (canvasId) {
-    super()
+    super(Brush.name)
 
     /**
      * html5 canvas
@@ -21,11 +21,12 @@ class Brush extends BaseClass {
    * @param {Shap} shap
    */
   draw (shap) {
+    this.logger('update model shapeAllList')
+
     var shapeAllList = model.get(constant.SHAPE_ALL)
     shapeAllList.push(shap)
     model.set(constant.SHAPE_ALL, shapeAllList)
 
-    this.logger('draw shap', shap)
     shap.draw(this.canvas)
   }
 

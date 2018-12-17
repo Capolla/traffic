@@ -4,7 +4,7 @@ import debug from 'debug'
  * Base Class
  */
 class BaseClass {
-  constructor () {
+  constructor (className = '') {
     /**
      * application debug
      */
@@ -12,11 +12,11 @@ class BaseClass {
     /**
      * application debug logger
      */
-    this.logger = this.debug('app:log')
+    this.logger = this.debug('app:log:' + className)
     /**
      * application error logger
      */
-    this.error = this.debug('ERROR')
+    this.error = this.debug('ERROR:' + className)
   }
 }
 

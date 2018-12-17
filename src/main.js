@@ -12,7 +12,7 @@ import debug from 'debug'
  * 构造traffic实体并将其导出
  */
 
-const logger = debug('app:log')
+const logger = debug('app:log:main')
 // The logger should only be disabled if we’re not in production
 if (ENV !== 'production') {
   // Enable the logger

@@ -6,7 +6,7 @@ import constant from '../util/constant'
  */
 class Rect extends Shape {
   constructor (name = 'rect', property = {}) {
-    super(name, constant.SHAPE_RECT)
+    super(name, constant.SHAPE_RECT, Rect.name)
     /**
      * 宽
      */
@@ -26,9 +26,10 @@ class Rect extends Shape {
   /**
    * draw with html5 canvas
    * @param {Canvas} canvas
+   * @override
    */
   draw (canvas) {
-    this.logger('draw rect', this)
+    super.draw(this)
 
     canvas.lineWidth = 30
     canvas.fillStyle = this.color

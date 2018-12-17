@@ -6,8 +6,8 @@ import BaseClass from '../core/base'
  * traffic中所有形状的基类
  */
 class Shape extends BaseClass {
-  constructor (name = 'shpe', type) {
-    super()
+  constructor (name = 'shpe', type, className = '') {
+    super(className)
     /**
      * id
      */
@@ -44,6 +44,15 @@ class Shape extends BaseClass {
      * 引用index
      */
     this.refIndex = -1
+  }
+
+  /**
+   * 绘制Shape
+   *
+   * @param {Shape} shape
+   */
+  draw (shape) {
+    this.logger('draw shape', shape)
   }
 }
 

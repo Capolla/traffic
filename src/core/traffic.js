@@ -7,7 +7,7 @@ import BaseClass from './base'
  */
 class Traffic extends BaseClass {
   constructor () {
-    super()
+    super(Traffic.name)
     /**
      * traffic banner
      */
