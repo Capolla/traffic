@@ -1,10 +1,13 @@
+import BaseClass from '../core/base'
+
 /**
- * Shap base class
+ * Shape base class
  *
  * traffic中所有形状的基类
  */
-class Shap {
+class Shape extends BaseClass {
   constructor (name = 'shpe', type) {
+    super()
     /**
      * id
      */
@@ -44,4 +47,4 @@ class Shap {
   }
 }
 
-export default Shap
+export default Shape
