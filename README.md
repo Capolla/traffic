@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Powered%20by-traffic-brightgreen.svg)](https://github.com/Capolla/traffic)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
 
-traffic.js is a graphic library designed for rail control system web ui.
+traffic.js is a JavaScript graphic library designed for rail control system web ui.
 
 ## Directory
 

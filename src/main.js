@@ -12,12 +12,12 @@ import debug from 'debug'
  * 构造traffic实体并将其导出
  */
 
-const log = debug('app:log')
+const logger = debug('app:log')
 // The logger should only be disabled if we’re not in production
 if (ENV !== 'production') {
   // Enable the logger
   debug.enable('*')
-  log('Logging is enabled!')
+  logger('Logging is enabled!')
 } else {
   // Disable the logger
   debug.disable()
@@ -28,6 +28,6 @@ var traffic = new Traffic('traffic.js@XiangyuDu')
 model.set(constant.TRAFFIC, traffic)
 traffic.setModel(model)
 
-log('--- traffic construct successfully! ---')
+logger('--- traffic construct successfully! ---')
 
 export default traffic

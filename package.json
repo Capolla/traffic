@@ -2,7 +2,7 @@
   "name": "traffic",
   "version": "1.0.0",
   "author": "Xiangyu Du (Capolla@163.com)",
-  "description": "traffic.js is a graphic library designed for rail control system web ui.",
+  "description": "traffic.js is a JavaScript graphic library designed for rail control system web ui.",
   "main": "dist/traffic.cjs.js",
   "module": "dist/traffic.esm.js",
   "umd:main": "dist/traffic.umd.js",

@@ -1,5 +1,5 @@
 import Rect from '../shap/rect'
-import Canvas from './canvas'
+import Brush from './brush'
 
 class Traffic {
   constructor (banner) {
@@ -11,14 +11,14 @@ class Traffic {
      * rect
      */
     this.Rect = Rect
+    // /**
+    //  * rect list
+    //  */
+    // this.rectList = []
     /**
-     * rect list
+     * traffic brush
      */
-    this.rectList = []
-    /**
-     * html5 canvas
-     */
-    this.Canvas = Canvas
+    this.Brush = Brush
     /**
      * application model
      */
@@ -30,11 +30,11 @@ class Traffic {
   }
 
   /**
-   * print message
+   * print traffic message
    */
   print () {
     console.log('[BANNER]', this.BANNER)
-    console.log('[rect list]', this.rectList)
+    // console.log('[rect list]', this.rectList)
   }
 
   getModel () {
@@ -45,13 +45,13 @@ class Traffic {
     this.model = model
   }
 
-  /**
-   * print rect list
-   * @param {rect object} rect
-   */
-  addRect (rect) {
-    this.rectList.push(rect)
-  }
+  // /**
+  //  * print rect list
+  //  * @param {rect object} rect
+  //  */
+  // addRect (rect) {
+  //   this.rectList.push(rect)
+  // }
 }
 
 export default Traffic
