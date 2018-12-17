@@ -32,7 +32,7 @@ var model = {
   get: function (name) {
     if (typeof name === 'undefined' || name === '') {
       error('name is empty!')
-      return undefined
+      throw new Error('name is empty!')
     }
     return modelMap[name]
   },
@@ -40,10 +40,11 @@ var model = {
   set: function (name, model) {
     if (typeof name === 'undefined' || name === '') {
       error('name is empty!')
-      return
+      throw new Error('name is empty!')
     }
     if (typeof model === 'undefined') {
       error('model is undefined!')
+      throw new Error('model is undefined!')
     }
     modelMap[name] = model
   },

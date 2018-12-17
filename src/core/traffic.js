@@ -52,7 +52,7 @@ class Traffic extends BaseClass {
   setModel (model) {
     if (typeof model === 'undefined') {
       this.error('cannot set model to undefined!')
-      return
+      throw new Error('cannot set model to undefined!')
     }
     this._model = model
   }

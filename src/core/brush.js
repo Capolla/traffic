@@ -48,17 +48,6 @@ class Brush extends BaseClass {
   h5Canvas () {
     return this.canvas
   }
-  // /**
-  //  * 绘制矩形
-  //  * @param {Rect} rect
-  //  */
-  // drawRect (rect) {
-  //   this.logger('draw rect', rect)
-
-  //   this.canvas.lineWidth = 30
-  //   this.canvas.fillStyle = rect.color
-  //   this.canvas.fillRect(rect.coorX, rect.coorY, rect.width, rect.height)
-  // }
 }
 
 export default Brush
