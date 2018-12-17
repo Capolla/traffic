@@ -5,7 +5,7 @@ import debug from 'debug'
 
 /**
  * @version 1.0.0
- * @author Xiangyu Du<xyd_hnyd@163.com>
+ * @author Xiangyu Du<dxy_hnyd@163.com>
  *
  * 项目入口文件
  *
