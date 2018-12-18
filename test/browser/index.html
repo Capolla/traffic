@@ -20,9 +20,16 @@
       width: 100,
       height: 100
     })
-    var brush = new traffic.Brush('canvas')
+    var circle = new traffic.Circle('', {
+      coorX: 400,
+      coorY: 250,
+      radius: 50,
+      color: '#9e98eb'
+    })
 
+    var brush = new traffic.Brush('canvas')
     brush.draw(rect)
+    brush.draw(circle)
     // traffic.setModel(undefined)
 
     var canvas = brush.h5Canvas()
