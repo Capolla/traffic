@@ -28,8 +28,8 @@ class Circle extends Shape {
     super.draw(this)
 
     canvas.beginPath()
-    canvas.fillStyle = this.color
     canvas.arc(this.coorX, this.coorY, this.radius, 0, Math.PI * 2)
+    canvas.fillStyle = this.color
     canvas.fill()
   }
 }
