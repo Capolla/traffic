@@ -1,6 +1,9 @@
-import Rect from '../shape/rect'
+import Rect from '../shape/base/rect'
 import Brush from './brush'
 import BaseClass from './base'
+import Circle from '../shape/base/circle'
+import Triangle from '../shape/base/triangle'
+import Diamond from '../shape/base/diamond'
 
 /**
  * Traffic
@@ -8,16 +11,32 @@ import BaseClass from './base'
 class Traffic extends BaseClass {
   constructor () {
     super(Traffic.name)
-    /**
-     * traffic banner
-     */
+
     this.BANNER = 'traffic.js@XiangyuDu'
+
+    // --- 基础形状 start ---
+
     /**
-     * rect
+     * 矩形
      */
     this.Rect = Rect
     /**
-     * traffic brush
+     * 圆形
+     */
+    this.Circle = Circle
+    /**
+     * 三角形
+     */
+    this.Triangle = Triangle
+    /**
+     * 菱形
+     */
+    this.Diamond = Diamond
+
+    // --- 基础形状 end ---
+
+    /**
+     * 画笔
      */
     this.Brush = Brush
     /**

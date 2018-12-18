@@ -31,11 +31,19 @@
       yList: [200, 300, 300],
       color: '#f81313'
     })
+    var diamond = new traffic.Diamond('', {
+      coorX: 250,
+      coorY: 100,
+      width: 100,
+      height: 100,
+      color: '#7C7A7C'
+    })
 
     var brush = new traffic.Brush('canvas')
     brush.draw(rect)
     brush.draw(circle)
     brush.draw(triangle)
+    brush.draw(diamond)
     // traffic.setModel(undefined)
 
     var canvas = brush.h5Canvas()
