@@ -1,5 +1,5 @@
 import Shape from './shape'
-import constant from '../util/constant'
+import constant from '../../util/constant'
 
 /**
  * 圆形

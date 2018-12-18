@@ -1,4 +1,4 @@
-import BaseClass from '../core/base'
+import BaseClass from '../../core/base'
 
 /**
  * Shape base class
