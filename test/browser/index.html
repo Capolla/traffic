@@ -26,10 +26,16 @@
       radius: 50,
       color: '#9e98eb'
     })
+    var triangle = new traffic.Triangle('', {
+      xList: [100, 50, 150],
+      yList: [200, 300, 300],
+      color: '#f81313'
+    })
 
     var brush = new traffic.Brush('canvas')
     brush.draw(rect)
     brush.draw(circle)
+    brush.draw(triangle)
     // traffic.setModel(undefined)
 
     var canvas = brush.h5Canvas()
