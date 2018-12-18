@@ -10,4 +10,6 @@
 - [X] shape construct
 - [X] draw graph with canvas
 
-- [ ] build all shape 
+- [X] build all shape 
+
+- [ ] build all component
