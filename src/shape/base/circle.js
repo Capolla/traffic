@@ -15,6 +15,18 @@ class Circle extends Shape {
   }
 
   /**
+   * 更新圆形的属性
+   *
+   * @param {property} property
+   * @override
+   */
+  set (property = {}) {
+    super.set(this, property)
+
+    this.radius = property['radius'] || 0
+  }
+
+  /**
    * draw circle with html5 canvas
    *
    * @param {Canvas} canvas

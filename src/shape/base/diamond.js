@@ -20,21 +20,27 @@ class Diamond extends Shape {
     /**
      * x坐标列表：以顶点为起始，沿顺时针方向依次四个顶点的x坐标
      */
-    this.xList = [
-      this.coorX,
-      (this.coorX + this.width * 1.0 / 2),
-      this.coorX,
-      (this.coorX - this.width * 1.0 / 2)
-    ]
+    this.xList = [this.coorX, (this.coorX + this.width * 1.0 / 2), this.coorX, (this.coorX - this.width * 1.0 / 2)]
     /**
      * y坐标列表：以顶点为起始，沿顺时针方向依次四个顶点的y坐标
      */
-    this.yList = [
-      (this.coorY - this.height * 1.0 / 2),
-      this.coorY,
-      (this.coorY + this.height * 1.0 / 2),
-      this.coorY
-    ]
+    this.yList = [(this.coorY - this.height * 1.0 / 2), this.coorY, (this.coorY + this.height * 1.0 / 2), this.coorY]
+  }
+
+  /**
+   * 更新菱形的属性
+   *
+   * @param {property} property
+   * @override
+   */
+  set (property = {}) {
+    super.set(this, property)
+
+    this.width = property['width'] || 0
+    this.height = property['height'] || 0
+
+    this.xList = [this.coorX, (this.coorX + this.width * 1.0 / 2), this.coorX, (this.coorX - this.width * 1.0 / 2)]
+    this.yList = [(this.coorY - this.height * 1.0 / 2), this.coorY, (this.coorY + this.height * 1.0 / 2), this.coorY]
   }
 
   /**

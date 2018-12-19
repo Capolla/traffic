@@ -19,6 +19,19 @@ class Triangle extends Shape {
   }
 
   /**
+   * 更新三角形的属性
+   *
+   * @param {property} property
+   * @override
+   */
+  set (property = {}) {
+    super.set(this, property)
+
+    this.xList = property['xList'] || [0, 0, 0]
+    this.yList = property['yList'] || [0, 0, 0]
+  }
+
+  /**
    * draw triangle with html5 canvas
    *
    * @param {Canvas} canvas

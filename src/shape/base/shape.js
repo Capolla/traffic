@@ -1,4 +1,5 @@
 import BaseClass from '../../core/base'
+import util from '../../util/util'
 
 /**
  * Shape base class
@@ -11,7 +12,7 @@ class Shape extends BaseClass {
     /**
      * id
      */
-    this.index = -1
+    this.index = util.uuid()
     /**
      * 名称
      */
@@ -47,12 +48,19 @@ class Shape extends BaseClass {
   }
 
   /**
-   * update the shape property
+   * 更新Shape属性
    *
    * @param {Shape} shape
    */
-  set (shape) {
+  set (shape, property = {}) {
     this.logger('update shape property', shape)
+
+    this.coorX = property['coorX'] || 0
+    this.coorY = property['coorY'] || 0
+    this.status = property['status'] || 'normal'
+    this.active = property['active'] || true
+    this.color = property['color'] || '#000000'
+    this.refIndex = property['refIndex'] || -1
   }
 
   /**
