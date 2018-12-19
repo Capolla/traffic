@@ -44,6 +44,12 @@
     brush.draw(circle)
     brush.draw(triangle)
     brush.draw(diamond)
+
+    window.setTimeout(function() {
+      diamond.destroy()
+      brush.drawAll()
+    }, 2000)
+
     // traffic.setModel(undefined)
 
     var canvas = brush.h5Canvas()
