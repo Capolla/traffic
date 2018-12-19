@@ -1,5 +1,6 @@
 import BaseClass from '../../core/base'
 import util from '../../util/util'
+import model from '../../model/model'
 
 /**
  * Shape base class
@@ -10,7 +11,7 @@ class Shape extends BaseClass {
   constructor (name = 'shpe', type, className = '', property = {}) {
     super(className)
     /**
-     * id
+     * id: UUID(v4)
      */
     this.index = util.uuid()
     /**
@@ -48,6 +49,15 @@ class Shape extends BaseClass {
   }
 
   /**
+   * 将shape注册至model
+   *
+   * @param {Shape} shape
+   */
+  register (shape) {
+    model.addShape(shape)
+  }
+
+  /**
    * 更新Shape属性
    *
    * @param {Shape} shape
@@ -70,6 +80,16 @@ class Shape extends BaseClass {
    */
   draw (shape) {
     this.logger('draw shape', shape)
+  }
+
+  /**
+   * 销毁指定的shape
+   *
+   * @param {Shape} shape
+   */
+  destroy () {
+    this.logger('destroy shape:', this)
+    model.removeShape(this)
   }
 }
 

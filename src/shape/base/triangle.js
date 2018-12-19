@@ -16,6 +16,8 @@ class Triangle extends Shape {
      * y坐标列表：以顶点为起始，沿顺时针方向依次三个顶点的y坐标
      */
     this.yList = property['yList'] || [0, 0, 0]
+
+    super.register(this)
   }
 
   /**

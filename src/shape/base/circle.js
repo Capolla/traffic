@@ -12,6 +12,8 @@ class Circle extends Shape {
      * 半径
      */
     this.radius = property['radius'] || 0
+
+    super.register(this)
   }
 
   /**

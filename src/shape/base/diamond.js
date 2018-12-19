@@ -25,6 +25,8 @@ class Diamond extends Shape {
      * y坐标列表：以顶点为起始，沿顺时针方向依次四个顶点的y坐标
      */
     this.yList = [(this.coorY - this.height * 1.0 / 2), this.coorY, (this.coorY + this.height * 1.0 / 2), this.coorY]
+
+    super.register(this)
   }
 
   /**

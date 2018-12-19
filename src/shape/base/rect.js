@@ -16,6 +16,8 @@ class Rect extends Shape {
      * 高
      */
     this.height = property['height'] || 0
+
+    super.register(this)
   }
 
   /**
