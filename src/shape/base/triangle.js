@@ -6,7 +6,7 @@ import constant from '../../util/constant'
  */
 class Triangle extends Shape {
   constructor (name = 'triangle', property = {}) {
-    super(name, constant.SHAPE_TRIANGLE, Triangle.name)
+    super(name, constant.SHAPE_TRIANGLE, Triangle.name, property)
 
     /**
      * x坐标列表：以顶点为起始，沿顺时针方向依次三个顶点的x坐标
@@ -16,7 +16,6 @@ class Triangle extends Shape {
      * y坐标列表：以顶点为起始，沿顺时针方向依次三个顶点的y坐标
      */
     this.yList = property['yList'] || [0, 0, 0]
-    this.color = property['color'] || '#000000'
   }
 
   /**

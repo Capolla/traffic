@@ -6,7 +6,7 @@ import constant from '../../util/constant'
  */
 class Rect extends Shape {
   constructor (name = 'rect', property = {}) {
-    super(name, constant.SHAPE_RECT, Rect.name)
+    super(name, constant.SHAPE_RECT, Rect.name, property)
 
     /**
      * 宽
@@ -16,7 +16,19 @@ class Rect extends Shape {
      * 高
      */
     this.height = property['height'] || 0
+  }
 
+  /**
+   * 更新矩形的属性
+   *
+   * @param {property} property
+   * @override
+   */
+  set (property = {}) {
+    super.set(this)
+
+    this.width = property['width'] || 0
+    this.height = property['height'] || 0
     this.color = property['color'] || '#000000'
     this.coorX = property['coorX'] || 0
     this.coorY = property['coorY'] || 0

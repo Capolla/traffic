@@ -6,7 +6,7 @@ import constant from '../../util/constant'
  */
 class Diamond extends Shape {
   constructor (name = 'diamond', property = {}) {
-    super(name, constant.SHAPE_DIAMOND, Diamond.name)
+    super(name, constant.SHAPE_DIAMOND, Diamond.name, property)
 
     /**
      * 宽
@@ -16,10 +16,6 @@ class Diamond extends Shape {
      * 高
      */
     this.height = property['height'] || 0
-
-    this.color = property['color'] || '#000000'
-    this.coorX = property['coorX'] || 0
-    this.coorY = property['coorY'] || 0
 
     /**
      * x坐标列表：以顶点为起始，沿顺时针方向依次四个顶点的x坐标

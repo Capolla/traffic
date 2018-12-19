@@ -6,16 +6,12 @@ import constant from '../../util/constant'
  */
 class Circle extends Shape {
   constructor (name = 'circle', property = {}) {
-    super(name, constant.SHAPE_CIRCLE, Circle.name)
+    super(name, constant.SHAPE_CIRCLE, Circle.name, property)
 
     /**
      * 半径
      */
     this.radius = property['radius'] || 0
-
-    this.color = property['color'] || '#000000'
-    this.coorX = property['coorX'] || 0
-    this.coorY = property['coorY'] || 0
   }
 
   /**
