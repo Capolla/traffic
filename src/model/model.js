@@ -13,18 +13,18 @@ var traffic
  */
 var canvas
 /**
- * shape list
- */
-var shapeAllList = []
-/**
  * context model map
  */
 var modelMap = {}
+/**
+ * all shape map
+ */
+var shapeMap = {}
 
 // --- model init start ---
 modelMap[constant.TRAFFIC] = traffic
 modelMap[constant.CANVAS] = canvas
-modelMap[constant.SHAPE_ALL] = shapeAllList
+modelMap[constant.SHAPE_ALL] = shapeMap
 // --- model init end ---
 
 var model = {
@@ -49,10 +49,52 @@ var model = {
     modelMap[name] = model
   },
 
+  /**
+   * 添加shape
+   *
+   * @param {Shape} shape
+   */
+  addShape: function (shape) {
+    if (typeof shape === 'undefined' || !shape['index']) {
+      error('cannot add undefined or empty shape!')
+      throw new Error('cannot add undefined or empty shape!')
+    }
+    shapeMap[shape.index] = shape
+    modelMap[constant.SHAPE_ALL] = shapeMap
+    this.print()
+  },
+
+  /**
+   * 删除指定的Shape
+   *
+   * @param {Shape} shape
+   */
+  removeShape: function (shape) {
+    if (typeof shape === 'undefined' || !shape['index']) {
+      error('cannot remove undefined or empty shape!')
+      throw new Error('cannot remove undefined or empty shape!')
+    }
+    delete shapeMap[shape.index]
+    modelMap[constant.SHAPE_ALL] = shapeMap
+    this.print()
+  },
+
+  /**
+   * 根据index获取shape
+   *
+   * @param {index} index
+   */
+  getShape: function (index) {
+    if (typeof index === 'undefined' || index === '') {
+      error('index is undefined or empty!')
+      throw new Error('index is undefined or empty!')
+    }
+    return shapeMap[index]
+  },
+
   print: function () {
     logger('model_map:', modelMap)
   }
-
 }
 
 export default model

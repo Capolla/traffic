@@ -12,21 +12,22 @@ class Brush extends BaseClass {
     super(Brush.name)
 
     /**
+     * 页面canvas标签dom
+     */
+    this.canvasDom = document.getElementById(canvasId)
+    /**
      * html5 canvas
      */
-    this.canvas = document.getElementById(canvasId).getContext('2d')
+    this.canvas = this.canvasDom.getContext('2d')
+
+    model.set(constant.CANVAS, this.canvas)
   }
+
   /**
    * 绘制图形
    * @param {Shap} shap
    */
   draw (shap) {
-    this.logger('update model shapeAllList')
-
-    var shapeAllList = model.get(constant.SHAPE_ALL)
-    shapeAllList.push(shap)
-    model.set(constant.SHAPE_ALL, shapeAllList)
-
     shap.draw(this.canvas)
   }
 
@@ -35,11 +36,13 @@ class Brush extends BaseClass {
    */
   drawAll () {
     this.logger('--- draw all shap ---')
+    this.canvas.clearRect(0, 0, this.canvasDom.width, this.canvasDom.height)
 
-    var shapeAllList = model.get(constant.SHAPE_ALL)
-    shapeAllList.array.forEach(shap => {
-      shap.draw(this.canvas)
-    })
+    var shapMap = model.get(constant.SHAPE_ALL)
+    for (let key in shapMap) {
+      let shape = shapMap[key]
+      shape.draw(this.canvas)
+    }
   }
 
   /**
