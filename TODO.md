@@ -6,10 +6,16 @@
 - [X] create prod and dev run script (with different process.env.NODE_ENV value)
 - [X] prod script build min bundle with '[uglify](https://github.com/TrySound/rollup-plugin-uglify) or [terser](https://github.com/TrySound/rollup-plugin-terser) plugin'
 
+
 - [X] traffic init with html canvas
 - [X] shape construct
 - [X] draw graph with canvas
 
+
 - [X] build all shape 
 
+
+- [ ] shape attribute update function
+- [ ] shape construct index with uuid
 - [ ] build all component
+- [ ] build traffic animation function
