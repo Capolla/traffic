@@ -6,7 +6,7 @@
 <body>
 
   <!-- canvas画布 -->
-  <canvas id="canvas" width="500" height="500"></canvas>
+  <canvas id="canvas" width="1500" height="700"></canvas>
 
   <script src="../../dist/traffic.umd.js"></script>
   <!-- <script src="../../dist/traffic.iife.js"></script> -->
@@ -45,10 +45,22 @@
     brush.draw(triangle)
     brush.draw(diamond)
 
-    window.setTimeout(function() {
-      diamond.destroy()
+    var animation = traffic.animation()
+
+    animation.play(function () {
+      diamond.set({
+        coorX: diamond.coorX + 1
+      })
       brush.drawAll()
+    })
+
+    window.setTimeout(function () {
+      animation.pause()
     }, 2000)
+
+    window.setTimeout(function () {
+      animation.start()
+    }, 5000)
 
     // traffic.setModel(undefined)
 
