@@ -29,8 +29,8 @@ class Rect extends Shape {
   set (property = {}) {
     super.set(this, property)
 
-    this.width = property['width'] || 0
-    this.height = property['height'] || 0
+    this.width = property['width'] || this.width
+    this.height = property['height'] || this.height
   }
 
   /**

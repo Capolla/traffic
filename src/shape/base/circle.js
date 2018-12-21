@@ -25,7 +25,7 @@ class Circle extends Shape {
   set (property = {}) {
     super.set(this, property)
 
-    this.radius = property['radius'] || 0
+    this.radius = property['radius'] || this.radius
   }
 
   /**

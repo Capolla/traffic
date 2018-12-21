@@ -29,8 +29,8 @@ class Triangle extends Shape {
   set (property = {}) {
     super.set(this, property)
 
-    this.xList = property['xList'] || [0, 0, 0]
-    this.yList = property['yList'] || [0, 0, 0]
+    this.xList = property['xList'] || this.xList
+    this.yList = property['yList'] || this.yList
   }
 
   /**

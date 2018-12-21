@@ -65,12 +65,12 @@ class Shape extends BaseClass {
   set (shape, property = {}) {
     this.logger('update shape property', shape)
 
-    this.coorX = property['coorX'] || 0
-    this.coorY = property['coorY'] || 0
-    this.status = property['status'] || 'normal'
-    this.active = property['active'] || true
-    this.color = property['color'] || '#000000'
-    this.refIndex = property['refIndex'] || -1
+    this.coorX = property['coorX'] || this.coorX
+    this.coorY = property['coorY'] || this.coorY
+    this.status = property['status'] || this.status
+    this.active = property['active'] || this.active
+    this.color = property['color'] || this.color
+    this.refIndex = property['refIndex'] || this.refIndex
   }
 
   /**

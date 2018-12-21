@@ -38,8 +38,8 @@ class Diamond extends Shape {
   set (property = {}) {
     super.set(this, property)
 
-    this.width = property['width'] || 0
-    this.height = property['height'] || 0
+    this.width = property['width'] || this.width
+    this.height = property['height'] || this.height
 
     this.xList = [this.coorX, (this.coorX + this.width * 1.0 / 2), this.coorX, (this.coorX - this.width * 1.0 / 2)]
     this.yList = [(this.coorY - this.height * 1.0 / 2), this.coorY, (this.coorY + this.height * 1.0 / 2), this.coorY]
