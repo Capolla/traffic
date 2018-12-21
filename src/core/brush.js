@@ -35,7 +35,7 @@ class Brush extends BaseClass {
    * 绘制shapList
    */
   drawAll () {
-    this.logger('--- draw all shap ---')
+    // 清除canvas内容
     this.canvas.clearRect(0, 0, this.canvasDom.width, this.canvasDom.height)
 
     var shapMap = model.get(constant.SHAPE_ALL)

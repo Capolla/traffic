@@ -2,6 +2,7 @@ import Traffic from './core/traffic'
 import model from './model/model'
 import constant from './util/constant'
 import debug from 'debug'
+import Animation from './animation/animation'
 
 /**
  * @version 1.0.0
@@ -24,8 +25,12 @@ if (ENV !== 'production') {
 }
 
 var traffic = new Traffic()
+// 初始化animation模块
+var animation = new Animation()
 
 model.set(constant.TRAFFIC, traffic)
+model.set(constant.ANIMATION, animation)
+
 traffic.setModel(model)
 
 logger('--- traffic construct successfully! ---')
