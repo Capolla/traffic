@@ -4,6 +4,7 @@ import BaseClass from './base'
 import Circle from '../shape/base/circle'
 import Triangle from '../shape/base/triangle'
 import Diamond from '../shape/base/diamond'
+import constant from '../util/constant'
 
 /**
  * Traffic
@@ -43,12 +44,14 @@ class Traffic extends BaseClass {
      * application model
      */
     this._model = {}
+
+    this._init()
   }
 
   /**
    * 初始化Traffic
    */
-  init () {
+  _init () {
     this.logger('traffic init')
   }
 
@@ -57,7 +60,13 @@ class Traffic extends BaseClass {
    */
   print () {
     console.log('[BANNER]', this.BANNER)
-    // console.log('[rect list]', this.rectList)
+  }
+
+  /**
+   * 返回浏览器动画控制类
+   */
+  animation () {
+    return this._model.get(constant.ANIMATION)
   }
 
   getModel () {
