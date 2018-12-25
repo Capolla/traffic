@@ -15,7 +15,7 @@
 - [X] build all shape 
 
 
+- [X] build traffic animation function
 - [ ] shape attribute update function
 - [ ] shape construct index with uuid
 - [ ] build all component
-- [ ] build traffic animation function
