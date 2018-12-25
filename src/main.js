@@ -24,8 +24,9 @@ if (ENV !== 'production') {
   debug.disable()
 }
 
+// 初始化traffic
 var traffic = new Traffic()
-// 初始化animation模块
+// 初始化animation
 var animation = new Animation()
 
 model.set(constant.TRAFFIC, traffic)

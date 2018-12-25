@@ -63,7 +63,7 @@ class Shape extends BaseClass {
    * @param {Shape} shape
    */
   set (shape, property = {}) {
-    this.logger('update shape property', shape)
+    // this.logger('update shape property', shape)
 
     this.coorX = property['coorX'] || this.coorX
     this.coorY = property['coorY'] || this.coorY
@@ -79,7 +79,7 @@ class Shape extends BaseClass {
    * @param {Shape} shape
    */
   draw (shape) {
-    this.logger('draw shape', shape)
+    // this.logger('draw shape', shape)
   }
 
   /**
