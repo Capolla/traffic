@@ -20,11 +20,16 @@ var modelMap = {}
  * all shape map
  */
 var shapeMap = {}
+/**
+ * timeout动画帧率，默认为60fps
+ */
+var animationFrame = 60
 
 // --- model init start ---
 modelMap[constant.TRAFFIC] = traffic
 modelMap[constant.CANVAS] = canvas
 modelMap[constant.SHAPE_ALL] = shapeMap
+modelMap[constant.ANIMATION_FRAME] = animationFrame
 // --- model init end ---
 
 var model = {

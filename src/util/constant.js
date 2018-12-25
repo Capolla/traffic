@@ -15,4 +15,6 @@ constant.SHAPE_CIRCLE = 'shape_circle'
 constant.SHAPE_TRIANGLE = 'shape_triangle'
 constant.SHAPE_DIAMOND = 'shape_diamond'
 
+constant.ANIMATION_FRAME = 'animation_frame'
+
 export default constant
