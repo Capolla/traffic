@@ -47,19 +47,29 @@
 
     var animation = traffic.animation()
 
-    animation.play(function () {
+    var diamondAnimation = animation.requestAnimation(function () {
       diamond.set({
         coorX: diamond.coorX + 1
       })
       brush.drawAll()
     })
 
+    var circleAnimation = animation.requestAnimation(function () {
+      circle.set({
+        coorX: circle.coorX + 1
+      })
+      brush.drawAll()
+    })
+
+    animation.play(diamondAnimation)
+    animation.play(circleAnimation)
+
     window.setTimeout(function () {
-      animation.pause()
+      animation.pause(diamondAnimation)
     }, 2000)
 
     window.setTimeout(function () {
-      animation.start()
+      animation.pause(circleAnimation)
     }, 5000)
 
     // traffic.setModel(undefined)
