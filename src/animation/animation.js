@@ -1,4 +1,6 @@
 import BaseClass from '../core/base'
+import RequestAnimation from './requestAnimation'
+import util from '../util/util'
 
 /**
  * 浏览器动画控制类
@@ -6,15 +8,6 @@ import BaseClass from '../core/base'
 class Animation extends BaseClass {
   constructor () {
     super(Animation.name)
-
-    /**
-     * 动画暂停
-     */
-    this.animationPause = false
-    /**
-     * 用户定义的动画内容
-     */
-    this.callback = undefined
 
     this._init()
   }
@@ -87,38 +80,42 @@ class Animation extends BaseClass {
   }
 
   /**
-   * 使用浏览器动画循环接口播放动画
-   *
+   * 构造浏览器动画
    * @param {callback} callback
    */
-  play (callback = this.callback) {
-    this.callback = callback
-    let self = this
-    function animate (time) {
-      if (!self.animationPause) {
-        callback()
-        window.requestNextAnimationFrame(animate)
-      }
+  requestAnimation (callback) {
+    if (util.functionEmpty(callback)) {
+      this.error('callback is undefined or not function!')
+      throw new Error('callback is undefined or not function!')
     }
+    return new RequestAnimation(callback)
+  }
 
-    window.requestNextAnimationFrame(animate)
+  /**
+   * 构造timeout动画
+   * @param {callback} callback
+   */
+  timeoutAnimation (callback, frame) {
+    if (util.functionEmpty(callback)) {
+      this.error('callback is undefined or not function!')
+      throw new Error('callback is undefined or not function!')
+    }
+    // TODO
+    // return new RequestAnimation(callback)
   }
 
   /**
    * 暂停浏览器动画播放
    */
-  pause () {
-    this.logger('animation pause')
-    this.animationPause = true
+  play (animation) {
+    animation.start()
   }
 
   /**
    * 开始浏览器动画播放
    */
-  start () {
-    this.logger('animation start')
-    this.animationPause = false
-    this.play()
+  pause (animation) {
+    animation.pause()
   }
 }
 
