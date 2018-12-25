@@ -1,6 +1,7 @@
 import BaseClass from '../core/base'
 import RequestAnimation from './requestAnimation'
 import util from '../util/util'
+import TimeoutAnimation from './timeoutAnimation'
 
 /**
  * 浏览器动画控制类
@@ -66,7 +67,7 @@ class Animation extends BaseClass {
           window.oRequestAnimationFrame ||
           window.msRequestAnimationFrame ||
           function (callback, element) {
-            // 采用setTimeout方法来模拟实现60fps的动画
+            // 采用setTimeout方法来模拟实现动画，默认为60fps
             var start, finish
             window.setTimeout(function () {
               start = +new Date()
@@ -85,8 +86,8 @@ class Animation extends BaseClass {
    */
   requestAnimation (callback) {
     if (util.functionEmpty(callback)) {
-      this.error('callback is undefined or not function!')
-      throw new Error('callback is undefined or not function!')
+      this.error('callback is undefined or its not function!')
+      throw new Error('callback is undefined or its not function!')
     }
     return new RequestAnimation(callback)
   }
@@ -100,8 +101,11 @@ class Animation extends BaseClass {
       this.error('callback is undefined or not function!')
       throw new Error('callback is undefined or not function!')
     }
-    // TODO
-    // return new RequestAnimation(callback)
+    if (typeof frame !== 'number' || frame <= 0 || frame > 120) {
+      this.error('frame is illegal!')
+      throw new Error('frame is illegal!')
+    }
+    return new TimeoutAnimation(callback, frame)
   }
 
   /**
