@@ -8,7 +8,7 @@ import model from '../../model/model'
  * traffic中所有形状的基类
  */
 class Shape extends BaseClass {
-  constructor (name = 'shpe', type, className = '', property = {}) {
+  constructor (name = 'shpe', type, className = Shape.name, property = {}) {
     super(className)
     /**
      * id: UUID(v4)
